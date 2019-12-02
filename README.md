@@ -28,7 +28,7 @@ da una chiamata a subroutine sostituendo ad IP il valore prelevato dallo stack.
 
 ## Registri
 
-La macchina virtuale puo utilizzare 32 registri interi R0-R31. Ciascun registro puo essere utilizzato come operando
+La macchina virtuale puo utilizzare 32 registri interi R0-R31. Ciascun registro puo essere utilizzato come operando
 o contenere il risultato di operazioni.
 
 ## Utilizzo Macchina virtuale
@@ -36,7 +36,7 @@ o contenere il risultato di operazioni.
 La virtual machine accede da linea di comando due parametri: operazione ('esegui' o 'stampa') e nome del file
 di testo contenente il programma. Ciascuna linea delfile di testo contiene un numero intero corrispondente
 ad un elemento del codice macchina del programma (una posizione dell'array di interi) ed eventuali commenti
-preceduto dal carattere ';'. La prima linea contiene il numero di linee non vuote delfile (esclusa la prima), uguale
+preceduto dal carattere ';'. La prima linea contiene il numero di linee non vuote del file (esclusa la prima), uguale
 alla lunghezza dell'array di interi che conterrà il programma da eseguire.
 Nel caso l'operazione richiesta sia 'stampa' la virtual machine:
 
@@ -49,11 +49,11 @@ anzichè 3)
 
 Nel caso l'operazione richiesta sia 'esegui' VM deve:
 * vericare che ille esista (altrimenti termina con un errore)
-* aprire ille, allocare blocco di memoria di dimensione adeguata (array di interi, dimensione dalla prima linea
-delle) e leggere le istruzioni dal le scrivendo gli interi corrispondenti in memoria
+* aprire il file, allocare blocco di memoria di dimensione adeguata (array di interi, dimensione dalla prima linea
+del file) e leggere le istruzioni dal le scrivendo gli interi corrispondenti in memoria
 * inizializzare i registri e lo stack
 * inizializzare IP a zero
-* ripetere fetch-executeno a che l'istruzione è diversa da HALT
+* ripetere fetch-execute fino a che l'istruzione è diversa da HALT
 
 ## Programmi dimostrativi
 
