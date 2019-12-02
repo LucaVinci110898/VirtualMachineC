@@ -57,7 +57,7 @@ del file) e leggere le istruzioni dal le scrivendo gli interi corrispondenti in 
 
 ## Programmi dimostrativi
 
-Alcuni programmi dimostrativi sono contenuti della cartella "FileProva".
+Alcuni programmi dimostrativi sono presenti nella Repository.
 Codice macchina nel formato richiesto per il file di input,
 
 codice scritto in c:
