@@ -14,7 +14,7 @@ stack (dopo aver decrementato SP). In caso di stack over
 ow o stack under
 ow il programma termina immediatamente segnalando un errore.
 
-## Instruction pointer, jump, chiamate a subrout
+## Instruction pointer, jump, chiamate a subroutine
 
 La macchina virtuale, dopo il bootstrap durante il quale vengono inizializzate le strutture dati ed i registri, ripetutamente
 legge le istruzioni del programma in codice macchina (fetch), ne prepara gli operandi e le esegue (execute).
@@ -36,7 +36,7 @@ o contenere il risultato di operazioni.
 La virtual machine accede da linea di comando due parametri: operazione ('esegui' o 'stampa') e nome del file
 di testo contenente il programma. Ciascuna linea delfile di testo contiene un numero intero corrispondente
 ad un elemento del codice macchina del programma (una posizione dell'array di interi) ed eventuali commenti
-preceduto dal carattere ';'. La prima linea contiene il numero di linee non vuote del file (esclusa la prima), uguale
+preceduto dal carattere ';'. La prima linea contiene il numero di linee non vuote del file (esclusa la prima), uguale
 alla lunghezza dell'array di interi che conterrà il programma da eseguire.
 Nel caso l'operazione richiesta sia 'stampa' la virtual machine:
 
