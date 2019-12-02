@@ -53,7 +53,7 @@ Nel caso l'operazione richiesta sia 'esegui' VM deve:
 del file) e leggere le istruzioni dal le scrivendo gli interi corrispondenti in memoria
 * inizializzare i registri e lo stack
 * inizializzare IP a zero
-* ripetere fetch-execute fino a che l'istruzione è diversa da HAL
+* ripetere fetch-execute fino a che l'istruzione è diversa da HALT
 
 ## Programmi dimostrativi
 
