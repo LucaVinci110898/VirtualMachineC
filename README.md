@@ -34,31 +34,31 @@ o contenere il risultato di operazioni.
 ## Utilizzo Macchina virtuale
 
 La virtual machine accede da linea di comando due parametri: operazione ('esegui' o 'stampa') e nome del file
-di testo contenente il programma. Ciascuna linea delfile di testo contiene un numero intero corrispondente
+di testo contenente il programma. Ciascuna linea delfile di testo contiene un numero intero corrispondente
 ad un elemento del codice macchina del programma (una posizione dell'array di interi) ed eventuali commenti
 preceduto dal carattere ';'. La prima linea contiene il numero di linee non vuote del file (esclusa la prima), uguale
 alla lunghezza dell'array di interi che conterrà il programma da eseguire.
 Nel caso l'operazione richiesta sia 'stampa' la virtual machine:
 
-* verificherà che il file esista (altrimenti terminerà con un errore)
-* aprirà il file e stamparà le istruzioni del programma corrispondente secondo il formato:
+* verificherà che il file esista (altrimenti terminerà con un errore)
+* aprirà il file e stamparà le istruzioni del programma corrispondente secondo il formato:
 [posizione] istruzione P1 P2
 dove posizione è la posizione nell'array, istruzione il codice mnemonico, P1 e P2 sono gli eventuali parametri.
 Nel caso uno del parametri sia un registro stampare la rappresentazione mnemonica corrispondente (es: R3
 anzichè 3)
 
 Nel caso l'operazione richiesta sia 'esegui' VM deve:
-* vericare che ille esista (altrimenti termina con un errore)
-* aprire il file, allocare blocco di memoria di dimensione adeguata (array di interi, dimensione dalla prima linea
-del file) e leggere le istruzioni dal le scrivendo gli interi corrispondenti in memoria
+* vericare che il file esista (altrimenti termina con un errore)
+* aprire il file, allocare blocco di memoria di dimensione adeguata (array di interi, dimensione dalla prima linea
+del file) e leggere le istruzioni dal le scrivendo gli interi corrispondenti in memoria
 * inizializzare i registri e lo stack
 * inizializzare IP a zero
-* ripetere fetch-execute fino a che l'istruzione è diversa da HALT
+* ripetere fetch-execute fino a che l'istruzione è diversa da HAL
 
 ## Programmi dimostrativi
 
 Alcuni programmi dimostrativi sono contenuti della cartella "FileProva".
-Codice macchina nel formato richiesto per il file di input,
+Codice macchina nel formato richiesto per il file di input,
 
 codice scritto in c:
 ```c
