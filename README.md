@@ -47,13 +47,13 @@ dove posizione è la posizione nell'array, istruzione il codice mnemonico, P1 e 
 Nel caso uno del parametri sia un registro stampare la rappresentazione mnemonica corrispondente (es: R3
 anzichè 3)
 
-Nel caso l'operazione richiesta sia 'esegui' VM deve:
-* vericare che il file esista (altrimenti termina con un errore)
-* aprire il file, allocare blocco di memoria di dimensione adeguata (array di interi, dimensione dalla prima linea
+Nel caso l'operazione richiesta sia 'esegui' VM :
+* verificherà che il file esista (altrimenti termina con un errore)
+* aprirà il file, allocarà il blocco di memoria di dimensione adeguata (array di interi, dimensione dalla prima linea
 del file) e leggere le istruzioni dal le scrivendo gli interi corrispondenti in memoria
-* inizializzare i registri e lo stack
-* inizializzare IP a zero
-* ripetere fetch-execute fino a che l'istruzione è diversa da HALT
+* inizializzarà i registri e lo stack
+* inizializzarà IP a zero
+* ripeterà fetch-execute fino a che l'istruzione è diversa da HALT
 
 ## Programmi dimostrativi
 
@@ -119,3 +119,17 @@ codice c convertito in codice macchina accettato dalla virtual machine:
 ; fine:
 21 ; [ 3 4 ] RET
 ```
+
+## Comandi per utilizzare la VirtualMachine
+
+Comando "esegui":
+
+```bash
+./VM "esegui" "nome_del_file"
+```
+Comando "stampa"
+
+```bash
+./VM "stampa" "nome_del_file"
+```
+
