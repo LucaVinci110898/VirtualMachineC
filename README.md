@@ -132,4 +132,22 @@ Comando "stampa"
 ```bash
 ./VM "stampa" "nome_del_file"
 ```
+Un'output di esempio del comando stampa di un file scritto in codice macchina sarà come segue:
 
+```
+[ 0 ] MOV R0 5
+[ 3 ] CALL 8
+[ 5 ] DISPLAY R30
+[ 7 ] HALT
+[ 8 ] MOV R1 2
+[ 11 ] MOV R20 1
+[ 14 ] MOV R30 1
+[ 17 ] SUB R0 R1
+[ 20 ] JNEG 34
+[ 22 ] MUL R30 R1
+[ 25 ] POP R30
+[ 27 ] ADD R1 R20
+[ 30 ] POP R1
+[ 32 ] JMP 17
+[ 34 ] RET
+```
